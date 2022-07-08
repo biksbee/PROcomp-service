@@ -102,8 +102,8 @@
                 // ID чата
                 const CHAT_ID = '-1001375626241';
                 const URI_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
-//                 const success = document.getElementById('success');
-                
+                const success = document.getElementById('success');
+
                 document.getElementById('tg').addEventListener('submit', function (e) {
                     e.preventDefault()
 
@@ -116,12 +116,12 @@
                         parse_mode: 'html',
                         text: message
                     })
-                    .then((res) => {
-                        this.name.value = "";
-                        this.phone.value = "";
-//                         success.innerHTML = "Заявка отправлена!";
-//                         success.style.display = "block";
-                    }    
+                        .then((res) => {
+                            this.name.value = "";
+                            this.phone.value = "";
+                            success.innerHTML = "Заявка отправлена!";
+                            success.style.display = "block";
+                        })
                 })
             </script>
 
