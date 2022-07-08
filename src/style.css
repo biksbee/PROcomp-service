@@ -81,7 +81,7 @@ body{
 }
 .bg_ef{
     padding-top: 150px;
-    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.50), rgba(0,0,0,0.50));
+    background-color: rgba(0,0,0,0.50);
     height: 630px;
 }
 .page1_body{
