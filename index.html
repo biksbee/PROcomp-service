@@ -114,6 +114,10 @@
                         parse_mode: 'html',
                         text: message
                     })
+                    .then((res) => {
+                        this.name.value = "";
+                        this.phone.value = "";
+                    }    
                 })
             </script>
 
