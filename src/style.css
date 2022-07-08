@@ -14,6 +14,16 @@ body{
 }
 .content-_site{
 }
+.logo{
+
+}
+.logotip{
+    height: 80px;
+    border-radius: 40px;
+}
+.logotip0{
+    display: none;
+}
 .navbar-nav{
     margin-left: 40px;
 }

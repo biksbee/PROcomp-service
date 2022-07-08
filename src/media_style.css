@@ -1,7 +1,22 @@
 /*1024 991 768 576 400 */
+
+@media screen and (max-width: 1547px){
+    .logotip{
+        height: 40px;
+    }
+    .header_phone{
+        margin: 0 auto;
+    }
+    .navbar-nav{
+        margin: 0 auto;
+    }
+}
 @media screen and (max-width: 1024px){
     body{
         background-size: 140%;
+    }
+    .logotip{
+        height: 30px;
     }
     .navbar-nav{
         margin-left: 20px;
@@ -44,6 +59,19 @@
     }
 }
 @media screen and (max-width: 992px){
+    .logotip{
+        display: none;
+    }
+
+    .logo0{
+        width: 100%;
+    }
+    .logotip0{
+        margin: 0 auto;
+        border-radius: 40px;
+        display: block;
+        height: 40px;
+    }
     .menu{
         margin-top: 20px;
         text-align: center;
