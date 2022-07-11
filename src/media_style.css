@@ -164,7 +164,13 @@
         display: block;
     }
     .information, .some_facts {
-        max-width: 80%;
+        max-width: 90%;
+    }
+    .information{
+        margin: 0 auto;
+    }
+    .inf_img{
+        display: none;
     }
     .some_facts{
         margin-bottom: 40px;
@@ -253,7 +259,8 @@
         font-size: 16px;
     }
     .information{
-        max-width: 80%;
+        max-width: 400px;
+        width: 100%;
         margin: 0;
     }
     .some_facts{
@@ -287,6 +294,9 @@
     .item_answer{
         grid-row: 4 / 5;
         grid-column: 1 / 2;
+    }
+    .page7{
+        padding-bottom: 0;
     }
     .page8_body {
         margin-left: 25px;

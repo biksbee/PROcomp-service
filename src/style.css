@@ -430,11 +430,21 @@ body{
     display: flex;
     width: max-content;
     margin: 0 auto;
-
 }
 .information{
-    width: 560px;
-    margin-right: 100px;
+}
+.some_facts{
+    margin: 0 auto;
+    width: 800px;
+    text-align: center;
+    padding-bottom: 100px;
+}
+.information_img{
+    max-width: 1024px;
+}
+.inf_img{
+    width: 100%;
+    height: 400px;
 }
 .title_facts{
     font-size: 28px;
