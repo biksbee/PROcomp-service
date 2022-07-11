@@ -109,6 +109,8 @@
                     let message = `<b>Заявка с сайта!</b>\n`;
                     message += `<b>Отправитель: </b> ${ this.name.value }\n`;
                     message += `<b>Телефон: </b> ${ this.phone.value }\n`;
+                    message += `<b>Адресс: </b> ${ this.location.value }\n`;
+                    message += `<b>Описание проблеммы: </b> ${ this.problem.value }\n`;
 
                     axios.post(URI_API, {
                         chat_id: CHAT_ID,
@@ -118,6 +120,8 @@
                         .then((res) => {
                             this.name.value = "";
                             this.phone.value = "";
+                            this.location.value = "";
+                            this.problem.value = "";
                             success.innerHTML = "Заявка отправлена!";
                             success.style.display = "block";
                         })
