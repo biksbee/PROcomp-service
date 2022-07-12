@@ -54,6 +54,9 @@
     .block_question{
         width: 80%;
     }
+    .pos_block {
+        width: 70%;
+    }
 }
 @media screen and (max-width: 992px){
     .menu{
@@ -90,6 +93,9 @@
     }
     .slider{
         display: none;
+    }
+    .pos_block {
+        width: 80%;
     }
 }
 @media screen and (max-width: 768px){

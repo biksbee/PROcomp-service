@@ -29,8 +29,8 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="#page5">Отзывы</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Цены</a>
+                <li class="nav-item make_call">
+                    <a class="nav-link text-dark" href="#">Заказать звонок</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="#page9">Контакты</a>
@@ -41,6 +41,73 @@
             </div>
         </div>
     </nav>
+
+    <div class="call_block">
+        <div class="pos_block">
+            <div class="col2_body">
+                <div class="zag_close">
+                    <div class="zag el1">Закажите звонок</div>
+                    <div class="close_block">
+                        <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"/></svg>
+                    </div>
+                </div>
+                <div class="small_text el1">И получите скидку в 35% на работу мастера!</div>
+                <form method="post" class="forma" id="tg">
+                    <div class="active_form active_block">
+                        <input name="name" type="text" placeholder="имя" class="form_el el1" required>
+                        <input name="phone" type="tel" placeholder="номер" class="form_el el1" required>
+
+                        <div id="success" class="alert alert-success" role="alert" style="display: none;"></div>
+                        <div style="display: flex">
+                            <button type="submit" class="btn_from form_el el1">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const TOKEN = '5432766650:AAHMzKrnXMzxabtBg-EhziMDX5W_mWMbi_I';
+
+        // ID чата
+        const CHAT_ID = '-1001375626241';
+        const URI_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
+        const success = document.getElementById('success');
+
+        document.getElementById('tg').addEventListener('submit', function (e) {
+            e.preventDefault()
+
+            let message = `<b>Заказ звонка!</b>\n`;
+            message += `<b>Отправитель: </b> ${ this.name.value }\n`;
+            message += `<b>Телефон: </b> ${ this.phone.value }\n`;
+
+            axios.post(URI_API, {
+                chat_id: CHAT_ID,
+                parse_mode: 'html',
+                text: message
+            })
+                .then((res) => {
+                    this.name.value = "";
+                    this.phone.value = "";
+                    success.innerHTML = "Заказ выполнен, ожидайте!";
+                    success.style.display = "block";
+                })
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.make_call, .btn_from, .close_block').click(function(event) {
+                $('.call_block').toggleClass('active');
+            });
+        });
+    </script>
+
+    <div class="call_master">
+
+    </div>
+
+
     <div class="container_site">
         <div class="content_site">
             <div class="page0">
@@ -78,7 +145,7 @@
                         </div>
                         <div class="col2">
                             <div class="col2_body">
-                                <div class="zag el1">Закажите звонок</div>
+                                <div class="zag el1">Вызвать мастера</div>
                                 <div class="small_text el1">И получите скидку в 35% на работу мастера!</div>
                                 <form method="post" class="forma" id="tg">
                                     <div class="active_form">
@@ -226,7 +293,7 @@
                                 <div class="constructor_for_btn">
                                     <div class="btn_page3">
                                         <div class="btn_p3_text">
-                                            Получить скидку
+                                            <a href="tel: 8 (029) 701 30 30" rel="noopener noreferrer" class="text-dark phone">Получить скидку</a>
                                         </div>
                                     </div>
                                 </div>
@@ -248,11 +315,11 @@
                             <div class="title_work">Сообщаете о проблеме</div>
                             <div class="small_title_work">Звоните в наш центр, описываете вашу проблему, в тот же день наш мастер приезжает к вам</div>
                         </div>
-                        <div class="item item2">1</div>
+                        <a href="tel: 8 (029) 701 30 30" rel="noopener noreferrer" class="text-dark phone"><div class="item item2">1</div></a>
                         <div class="item item3"></div>
                         <div class="item item4"><div class="border_img"></div></div>
                         <div class="item item5"></div>
-                        <div class="item item6">2</div>
+                        <a href="tel: 8 (029) 701 30 30" rel="noopener noreferrer" class="text-dark phone"><div class="item item6">2</div></a>
                         <div class="item item7">
                             <div class="title_work">Бесплатная диагностика</div>
                             <div class="small_title_work">Наш мастер произведет диагностику, сообщит о проблеме и предложит решение.</div>
@@ -263,7 +330,7 @@
                             <div class="title_work">Ремонт</div>
                             <div class="small_title_work">Мы договоримся о цене и сроках, мастер начнет работ</div>
                         </div>
-                        <div class="item item10">3</div>
+                        <a href="tel: 8 (029) 701 30 30" rel="noopener noreferrer" class="text-dark phone"><div class="item item10">3</div></a>
                         <div class="item item11"></div>
                     </div>
                 </div>
@@ -311,6 +378,14 @@
                 <div class="mail_to_send">
                     <div class="pos">
                         <div class="style_mail">Если вы обращались в наш сервис, пишите нам на fix.remtv@gmail.com. Мы бы очень хотели узнать ваше мнение о нашей работе!</div>
+                    </div>
+                    <div>
+                        <div class="style_mail">Или свяжитесь с нами по телефону</div>
+                        <div class="btn_page5">
+                            <div class="btn_p5_text">
+                                <a href="tel: 8 (029) 701 30 30" rel="noopener noreferrer" class="text-light phone">Позвонить</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
