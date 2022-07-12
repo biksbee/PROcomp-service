@@ -124,7 +124,7 @@
         margin: 0 auto;
     }
     .active_form input{
-        margin: 25px auto;
+        margin: 0 auto 25px auto;
     }
     .grid-container_work {
         grid-template-columns: auto auto;
