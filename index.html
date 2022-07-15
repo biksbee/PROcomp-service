@@ -72,11 +72,11 @@
         <div class="dop_content">
             <div class="label_form">Оставьте заявку, и в течении минуты мы вам перезвоним</div>
             <form method="post" class="dop_forma" id="fast_send">
-                <input name="name" type="text" placeholder="имя" class="dop_inp el2" required>
-                <input name="phone" type="tel" placeholder="номер" class="dop_inp el2" required>
-                <div class="alert alert-success" role="alert" style="display: none; position: absolute; top: -100%;"></div>
+                <input name="fastName" type="text" placeholder="имя" class="dop_inp el2" required>
+                <input name="fastPhone" type="tel" placeholder="номер" class="dop_inp el2" required>
                 <button type="submit" class="dop_btn el2">Отправить</button>
             </form>
+            <div id="fastSuccess" class="alert alert-success" role="alert"></div>
         </div>
     </div>
     <script src="script_menu.js"></script>
@@ -154,7 +154,7 @@
                 const CHAT_ID = '-1001375626241';
                 const URI_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
                 const success = document.getElementById('success');
-
+                const fastSuccess = document.getElementById('fastSuccess');
 
                 document.getElementById('tg').addEventListener('submit', function (e) {
                     e.preventDefault()
@@ -177,6 +177,30 @@
                             this.problem.value = "";
                             success.innerHTML = "Заявка отправлена!";
                             success.style.display = "block";
+                        })
+                })
+                document.getElementById('fast_send').addEventListener('submit', function (e) {
+                    e.preventDefault()
+
+                    let mess = `<b>Заявка с сайта!</b>\n`;
+                    mess += `<b>Отправитель: </b> ${this.fastName.value}\n`;
+                    mess += `<b>Телефон: </b> ${this.fastPhone.value}\n`;
+
+                    axios.post(URI_API, {
+                        chat_id: CHAT_ID,
+                        parse_mode: 'html',
+                        text: mess
+                    })
+                        .then((res) => {
+                            this.fastName.value = "";
+                            this.fastPhone.value = "";
+                            fastSuccess.innerHTML = "Заявка отправлена!";
+                            fastSuccess.style.display = "block";
+                            fastSuccess.style.width = "100vw";
+                            fastSuccess.style.top = "0";
+                            fastSuccess.style.left = "0";
+                            fastSuccess.style.textAlign = "center";
+                            fastSuccess.style.height = "70px";
                         })
                 })
             </script>

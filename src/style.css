@@ -95,6 +95,12 @@ body{
     background-color: #000;
     color: #fff;
 }
+#fastSuccess {
+    display: none;
+    position: absolute;
+    top: -100%;
+}
+
 .call_master{
     position: fixed;
     bottom: 50px;

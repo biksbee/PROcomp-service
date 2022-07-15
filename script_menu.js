@@ -11,7 +11,14 @@ $(function () {
 });
 
 $(document).ready(function() {
-    $('#zak, .call_master, .dop_btn').click(function(event) {
+    $('#zak, .call_master').click(function(event) {
         $('.dop_section').toggleClass('active');
+    });
+});
+$(document).ready(function() {
+    $('.dop_btn').click(function (event) {
+        setTimeout(() => {
+            $('.dop_section').removeClass('active');
+        }, 3000);
     });
 });
