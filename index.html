@@ -1,39 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Выезд + диагностика бесплатно. При вызове мастера скидка 35%. Оставляйте заявку и мы сразу свяжемся с вами.">
+     <meta name="keywords" content="Телефоны, Телевизоры, Ноутбуки, Компьютеры, Фотоаппараты, Плееры, Игровые консоли">
+     <meta name="google-site-verification" content="CXJ2FqpMtHYciAYhLjpU-_-t4P3JffUYk9rBlNeYu-c" />
+     <meta name="yandex-verification" content="13a4a519983c6aa3" />
     <link rel="stylesheet" type="text/css" href="src/style.css">
     <link rel="stylesheet" type="text/css" href="src/media_style.css">
     <link rel="shortcut icon" href="image/favicon.png" type="image/png">
-
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>PROcomp service</title>
-
+    
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white w-auto">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH12ZF928V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH12ZF928V');
+</script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(89537587, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+
+<noscript><div><img src="https://mc.yandex.ru/watch/89537587" style=" position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <nav id="header_menu" class="navbar navbar-expand-lg navbar-light bg-white w-auto">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="menu collapse navbar-collapse justify-content-between" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#service">Услуги</a>
+                    <a id="serv" class="nav-link text-dark" href="#service">Услуги</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#page5">Отзывы</a>
+                    <a id="otzv" class="nav-link text-dark" href="#page5">Отзывы</a>
                 </li>
                 <li class="nav-item make_call">
-                    <a class="nav-link text-dark" href="#">Заказать звонок</a>
+                    <a id="zak" class="nav-link text-dark">Заказать звонок</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#page9">Контакты</a>
+                    <a id="kont" class="nav-link text-dark" href="#page9">Контакты</a>
                 </li>
             </ul>
             <div class="header_phone text-dark">
@@ -41,86 +68,40 @@
             </div>
         </div>
     </nav>
-
-    <div class="call_block">
-        <div class="pos_block">
-            <div class="col2_body">
-                <div class="zag_close">
-                    <div class="zag el1">Закажите звонок</div>
-                    <div class="close_block">
-                        <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"/></svg>
-                    </div>
-                </div>
-                <div class="small_text el1">И получите скидку в 35% на работу мастера!</div>
-                <form method="post" class="forma" id="tg">
-                    <div class="active_form active_block">
-                        <input name="name" type="text" placeholder="имя" class="form_el el1" required>
-                        <input name="phone" type="tel" placeholder="номер" class="form_el el1" required>
-
-                        <div id="success" class="alert alert-success" role="alert" style="display: none;"></div>
-                        <div style="display: flex">
-                            <button type="submit" class="btn_from form_el el1">Отправить</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+    <div class="dop_section">
+        <div class="dop_content">
+            <div class="label_form">Оставьте заявку, и в течении минуты мы вам перезвоним</div>
+            <form method="post" class="dop_forma" id="fast_send">
+                <input name="name" type="text" placeholder="имя" class="dop_inp el2" required>
+                <input name="phone" type="tel" placeholder="номер" class="dop_inp el2" required>
+                <div class="alert alert-success" role="alert" style="display: none; position: absolute; top: -100%;"></div>
+                <button type="submit" class="dop_btn el2">Отправить</button>
+            </form>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-        const TOKEN = '5432766650:AAHMzKrnXMzxabtBg-EhziMDX5W_mWMbi_I';
-
-        // ID чата
-        const CHAT_ID = '-1001375626241';
-        const URI_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
-        const success = document.getElementById('success');
-
-        document.getElementById('tg').addEventListener('submit', function (e) {
-            e.preventDefault()
-
-            let message = `<b>Заказ звонка!</b>\n`;
-            message += `<b>Отправитель: </b> ${ this.name.value }\n`;
-            message += `<b>Телефон: </b> ${ this.phone.value }\n`;
-
-            axios.post(URI_API, {
-                chat_id: CHAT_ID,
-                parse_mode: 'html',
-                text: message
-            })
-                .then((res) => {
-                    this.name.value = "";
-                    this.phone.value = "";
-                    success.innerHTML = "Заказ выполнен, ожидайте!";
-                    success.style.display = "block";
-                })
-        })
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('.make_call, .btn_from, .close_block').click(function(event) {
-                $('.call_block').toggleClass('active');
-            });
-        });
-    </script>
+    <script src="script_menu.js"></script>
 
     <div class="call_master">
-
+        <div class="call_content">
+            <div class="call_master1 cm">оформить</div>
+            <div class="call_master2 cm">звонок</div>
+        </div>
     </div>
 
 
     <div class="container_site">
         <div class="content_site">
             <div class="page0">
+                <div class="logo">
+                    <img class="li" src="image/logo.png">
+                </div>
                 <div class="page0_body">
-                    <div class="logo">
-                        <img class="logotip" src="./image/logo.jpg">
-                    </div>
                     <div class="pos_title">
                         <div class="main_title">
-                            Ремонт цифровой техники
+                            <h1>Ремонт цифровой техники</h1>
                         </div>
                         <div class="fast">
-                            Быстрый и качественный ремонт всех видов цифровой техники с гарантией и бесплатной диагностикой.
+                            <h3>Быстрый и качественный ремонт всех видов цифровой техники с гарантией и бесплатной диагностикой.</h3>
                         </div>
                     </div>
                     <div class="main_img">
@@ -143,7 +124,7 @@
                                 и получите скидку! С выездом на Дом!
                             </div>
                         </div>
-                        <div class="col2">
+                        <div class="col2" id="col2">
                             <div class="col2_body">
                                 <div class="zag el1">Вызвать мастера</div>
                                 <div class="small_text el1">И получите скидку в 35% на работу мастера!</div>
@@ -151,8 +132,8 @@
                                     <div class="active_form">
                                         <input name="name" type="text" placeholder="имя" class="form_el el1" required>
                                         <input name="phone" type="tel" placeholder="номер" class="form_el el1" required>
-                                        <input name="location" type="text" placeholder="адрес" class="form_el el1" required>
-                                        <input name="problem" type="text" placeholder="описание проблема" class="form_el el1" required>
+                                        <input name="location" type="text" placeholder="адрес" class="form_el el1">
+                                        <input name="problem" type="text" placeholder="описание проблема" class="form_el el1">
 
                                         <div id="success" class="alert alert-success" role="alert" style="display: none;"></div>
                                         <button type="submit" class="btn_from form_el el1">Отправить</button>
@@ -163,7 +144,9 @@
                     </div>
                 </div>
             </div>
+
             <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
             <script>
                 const TOKEN = '5432766650:AAHMzKrnXMzxabtBg-EhziMDX5W_mWMbi_I';
 
@@ -172,19 +155,20 @@
                 const URI_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
                 const success = document.getElementById('success');
 
+
                 document.getElementById('tg').addEventListener('submit', function (e) {
                     e.preventDefault()
 
                     let message = `<b>Заявка с сайта!</b>\n`;
-                    message += `<b>Отправитель: </b> ${ this.name.value }\n`;
-                    message += `<b>Телефон: </b> ${ this.phone.value }\n`;
-                    message += `<b>Адресс: </b> ${ this.location.value }\n`;
-                    message += `<b>Описание проблеммы: </b> ${ this.problem.value }\n`;
+                    message += `<b>Отправитель: </b> ${this.name.value}\n`;
+                    message += `<b>Телефон: </b> ${this.phone.value}\n`;
+                    message += `<b>Адресс: </b> ${this.location.value}\n`;
+                    message += `<b>Описание проблеммы: </b> ${this.problem.value}\n`;
 
                     axios.post(URI_API, {
                         chat_id: CHAT_ID,
                         parse_mode: 'html',
-                        text: message
+                            text: message
                     })
                         .then((res) => {
                             this.name.value = "";
@@ -197,13 +181,12 @@
                 })
             </script>
 
+            <script src=""></script>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-            <script>
-                $(function () {
-                    $('input[type="tel"]').mask('+375(00)000-00-00');
-                });
-            </script>
+
+
+
             <div class="page2" id="service">
                 <div class="title">
                     Услуги
