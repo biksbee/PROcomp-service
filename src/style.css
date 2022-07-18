@@ -42,7 +42,7 @@ body{
 }
 .dop_section{
     position: fixed;
-    top: -100%;
+    top: -1000px;
     left: 0;
     width: 100vw;
     z-index: 79;
@@ -100,7 +100,16 @@ body{
     position: absolute;
     top: -100%;
 }
-
+.d_under{
+    display: block;
+}
+.d_near{
+    display: none;
+}
+.red_note{
+    text-align: center;
+    margin: 15px auto;
+}
 .call_master{
     position: fixed;
     bottom: 50px;
@@ -119,7 +128,6 @@ body{
     width: 110px;
     height: 110px;
     transition: all 0.2s ease;
-
 }
 .call_content {
     margin: auto;
@@ -136,6 +144,9 @@ body{
 }
 .page0_body{
     margin: 0 auto;
+}
+.logo0{
+    display: none;
 }
 .logo{
     margin: 0 auto;
@@ -367,6 +378,7 @@ body{
     font-family: 'Roboto',Arial,sans-serif;
     font-weight: 600;
     color: #000;
+    text-align: center;
 }
 .grid-container_work {
     margin-top: 50px;
@@ -675,4 +687,7 @@ body{
     font-size: 16px;
     line-height: 1.55;
     font-family: 'Roboto',Arial,sans-serif;
+}
+.foot{
+    margin-left: 0 !important;
 }

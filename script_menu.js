@@ -11,8 +11,25 @@ $(function () {
 });
 
 $(document).ready(function() {
-    $('#zak, .call_master').click(function(event) {
+    $('.call_master').click(function(event) {
+        $('.dop_section').addClass('active');
+        $('#navbarNav').removeClass('show');
+    });
+});
+$(document).ready(function() {
+    $('.nav-link').click(function(event) {
+        $('#navbarNav').removeClass('show');
+    });
+});
+$(document).ready(function() {
+    $('.navbar-toggler, #otzv, #serv, #kont').click(function(event) {
+        $('.dop_section').removeClass('active');
+    });
+});
+$(document).ready(function() {
+    $('#zak').click(function(event) {
         $('.dop_section').toggleClass('active');
+        $('#navbarNav').removeClass('show');
     });
 });
 $(document).ready(function() {

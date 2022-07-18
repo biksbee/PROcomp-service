@@ -10,6 +10,9 @@
     }
 }
 @media  screen and (max-width: 1440px) {
+    .dop_section{
+        height: 100%;
+    }
     .dop_content{
         display: block;
         height: 100%;
@@ -20,6 +23,12 @@
     }
     .el2{
         margin: 15px 0;
+    }
+    .d_under{
+        display: none;
+    }
+    .d_near{
+        display: block;
     }
 }
 @media screen and (max-width: 1024px){
@@ -60,9 +69,20 @@
     }
 }
 @media screen and (max-width: 992px){
+    .logo{
+        display: none;
+    }
+    .logo0{
+        display: block;
+        margin: 0 auto;
+        width: max-content;
+    }
     .menu{
         margin-top: 20px;
         text-align: center;
+    }
+    .page0_body{
+        padding-top: 100px;
     }
     .page1_body{
         display: block;
@@ -97,11 +117,17 @@
     .dop_section.active {
         top: 50px;
     }
+    .footer_mail{
+        font-size: 15px;
+    }
 
 }
 @media screen and (max-width: 768px){
     body{
         background-size: 180%;
+    }
+    .li0{
+        height: 40px;
     }
     .main_img{
         height: 200px;
@@ -180,7 +206,7 @@
     .footer{
         padding: 40px;
     }
-    .dop_content{
+    .dop_content, .red_note{
         width: 80%;
     }
     .label_form{
@@ -194,8 +220,8 @@
     .logo{
         padding: 50px 0 50px 0;
     }
-    .li{
-        height: 45px;
+    .li0{
+        height: 30px;
     }
     .main_title {
         padding-top: 0;
@@ -205,6 +231,19 @@
     }
     .page1_body{
         width: auto;
+    }
+    .call_master {
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+    }
+    .call_master:hover {
+        width: 60px;
+        height: 60px;
+    }
+    .cm{
+        font-size: 10px;
     }
     .col2{
         width: 90%;
@@ -310,13 +349,19 @@
     .footer, .maps{
         width: 100%;
     }
+    .maps{
+        height: 600px;
+    }
+    .small_title_work{
+    width: 90%;
+    }
 }
 @media screen and (max-width: 400px){
     body{
         background-size: 340%;
     }
-    .li{
-        height: 30px;
+    .li0{
+        height: 23px;
     }
     .header_phone {
         font-size: 20px;
@@ -330,6 +375,9 @@
     .col1, .col2{
         width: 80%;
         margin: 0 auto;
+    }
+    .col1{
+        font-size: 18px;
     }
     .col2{
         margin: 70px auto 0 auto;
@@ -363,5 +411,8 @@
     }
     .information{
         margin: 0 auto;
+    }
+    .footer_mail{
+        font-size: 16px;
     }
 }

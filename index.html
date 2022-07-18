@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Выезд + диагностика бесплатно. При вызове мастера скидка 35%. Оставляйте заявку и мы сразу свяжемся с вами.">
-     <meta name="keywords" content="Телефоны, Телевизоры, Ноутбуки, Компьютеры, Фотоаппараты, Плееры, Игровые консоли">
-     <meta name="google-site-verification" content="CXJ2FqpMtHYciAYhLjpU-_-t4P3JffUYk9rBlNeYu-c" />
-     <meta name="yandex-verification" content="13a4a519983c6aa3" />
+    <meta name="keywords" content="Телефоны, Телевизоры, Ноутбуки, Компьютеры, Фотоаппараты, Плееры, Игровые консоли">
+    <meta name="google-site-verification" content="CXJ2FqpMtHYciAYhLjpU-_-t4P3JffUYk9rBlNeYu-c" />
+    <meta name="yandex-verification" content="13a4a519983c6aa3" />
+    <meta http-equiv="Last-Modified" content="Sun, 18 Jul 2022 17:20:00 GMT">
     <link rel="stylesheet" type="text/css" href="src/style.css">
     <link rel="stylesheet" type="text/css" href="src/media_style.css">
     <link rel="shortcut icon" href="image/favicon.png" type="image/png">
@@ -48,6 +49,9 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="logo0">
+            <img class="li0" src="image/logo.png">
+        </div>
         <div class="menu collapse navbar-collapse justify-content-between" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -64,7 +68,7 @@
                 </li>
             </ul>
             <div class="header_phone text-dark">
-                Звоните <a href="tel: 8 (029) 701 30 30" rel="noopener noreferrer" class="text-dark phone">8 (029) 701 30 30</a>
+                Звоните <a href="tel: 8 (033) 359 53 31 " rel="noopener noreferrer" class="text-dark phone">8 (033) 359 53 31 </a>
             </div>
         </div>
     </nav>
@@ -75,9 +79,11 @@
                 <input name="fastName" type="text" placeholder="имя" class="dop_inp el2" required>
                 <input name="fastPhone" type="tel" placeholder="номер" class="dop_inp el2" required>
                 <button type="submit" class="dop_btn el2">Отправить</button>
+                <div class="label_form red_note d_near"><u><b>выезд + диагностика БЕСПЛАТНО, чистка от пыли в подарок</b></u></div>
             </form>
             <div id="fastSuccess" class="alert alert-success" role="alert"></div>
         </div>
+        <div class="label_form red_note d_under"><u><b>выезд + диагностика БЕСПЛАТНО, чистка от пыли в подарок</b></u></div>
     </div>
     <script src="script_menu.js"></script>
 
@@ -98,10 +104,10 @@
                 <div class="page0_body">
                     <div class="pos_title">
                         <div class="main_title">
-                            <h1>Ремонт цифровой техники</h1>
+                            <h1>Диагностика цифровой техники</h1>
                         </div>
                         <div class="fast">
-                            <h3>Быстрый и качественный ремонт всех видов цифровой техники с гарантией и бесплатной диагностикой.</h3>
+                            <h3>Быстрая и качественная диагностика всех видов цифровой техники с гарантией.</h3>
                         </div>
                     </div>
                     <div class="main_img">
@@ -115,7 +121,7 @@
                     <div class="page1_body">
                         <div class="col1">
                             <div>
-                                Звоните <a href="tel: 8 (029) 701 30 30" rel="noopener noreferrer" class="phone">8 (029) 701 30 30</a>
+                                Звоните <a href="tel: 8 (033) 359 53 31 " rel="noopener noreferrer" class="phone">8 (033) 359 53 31 </a>
                             </div>
                             <div>
                                Оформите заказ на услуги
@@ -134,7 +140,7 @@
                                         <input name="phone" type="tel" placeholder="номер" class="form_el el1" required>
                                         <input name="location" type="text" placeholder="адрес" class="form_el el1">
                                         <input name="problem" type="text" placeholder="описание проблема" class="form_el el1">
-
+                                        <input name="date" type="text" placeholder="дата время" class="form_el el1">
                                         <div id="success" class="alert alert-success" role="alert" style="display: none;"></div>
                                         <button type="submit" class="btn_from form_el el1">Отправить</button>
                                     </div>
@@ -164,6 +170,7 @@
                     message += `<b>Телефон: </b> ${this.phone.value}\n`;
                     message += `<b>Адресс: </b> ${this.location.value}\n`;
                     message += `<b>Описание проблеммы: </b> ${this.problem.value}\n`;
+                    message += `<b>Дата время: </b> ${this.date.value}\n`;
 
                     axios.post(URI_API, {
                         chat_id: CHAT_ID,
@@ -175,6 +182,7 @@
                             this.phone.value = "";
                             this.location.value = "";
                             this.problem.value = "";
+                            this.date.value = "";
                             success.innerHTML = "Заявка отправлена!";
                             success.style.display = "block";
                         })
@@ -225,7 +233,7 @@
                                 Телефоны
                             </div>
                             <div class="additional_inf">
-                                Специалисты сервисного центра осуществляют базовый ремонт сотовых телефонов за 15 минут.
+                                Специалисты сервисного центра осуществляют диагносику сотовых телефонов за 15 минут.
                             </div>
                         </div>
                         <div class="grid-item">
@@ -236,7 +244,7 @@
                                 Телевизоры
                             </div>
                             <div class="additional_inf">
-                                Ремонтируем неисправные телевизоры. Первую диагностику телевизора можно произвести сразу же на месте.
+                                Проверяем телевизоры. Первую диагностику телевизора можно произвести сразу же на месте.
                             </div>
                         </div>
                         <div class="grid-item">
@@ -247,7 +255,7 @@
                                 Ноутбуки
                             </div>
                             <div class="additional_inf">
-                                Ремонтируем, восстанавливаем, меняем, чистим, настраиваем и устраняем практически все неисправности.
+                                Диагностируем и настраиваем все марки ноутбуков.
                             </div>
                         </div>
                         <div class="grid-item">
@@ -258,7 +266,7 @@
                                 Компьютеры
                             </div>
                             <div class="additional_inf">
-                                Наши специалисты осуществляют качественный ремонт компьютеров любых производителей.
+                                Наши специалисты осуществляют качественную диагностику любых производителей.
                             </div>
                         </div>
                         <div class="grid-item">
@@ -269,7 +277,7 @@
                                 Фотоаппараты
                             </div>
                             <div class="additional_inf">
-                                Наш сервисный центр оказывает полный комплекс профессиональных услуг по ремонту зеркальных и цифровых фотоаппаратов.
+                                Наш сервисный центр оказывает полный комплекс профессиональных услуг по диагностике зеркальных и цифровых фотоаппаратов.
                             </div>
                         </div>
                         <div class="grid-item">
@@ -277,10 +285,10 @@
                                 <img src="https://static.tildacdn.com/tild3330-3832-4935-b765-393432326335/1Artboard1.svg">
                             </div>
                             <div class="title_services">
-                                Плееры
+                                Игновые консоли
                             </div>
                             <div class="additional_inf">
-                                Наш сервисный центр оказывает полный комплекс профессиональных услуг по ремонту зеркальных и цифровых фотоаппаратов.
+                                Диагностика любых консолей.
                             </div>
                         </div>
                     </div>
@@ -295,12 +303,12 @@
                                     - 20% на первый ремонт
                                 </div>
                                 <div class="title2_page3">
-                                    Оставьте заявку и получите скидку 20% на ваш первый ремонт в нашем сервисном центре!
+                                    Оставьте заявку и получите скидку 20% на вашу первую диагностику в нашем сервисном центре!
                                 </div>
                                 <div class="constructor_for_btn">
                                     <div class="btn_page3">
                                         <div class="btn_p3_text">
-                                            <a href="tel: 8 (029) 701 30 30" rel="noopener noreferrer" class="text-dark phone">Получить скидку</a>
+                                            <a href="tel: 8 (033) 359 53 31 " rel="noopener noreferrer" class="text-dark phone">Получить скидку</a>
                                         </div>
                                     </div>
                                 </div>
@@ -322,11 +330,11 @@
                             <div class="title_work">Сообщаете о проблеме</div>
                             <div class="small_title_work">Звоните в наш центр, описываете вашу проблему, в тот же день наш мастер приезжает к вам</div>
                         </div>
-                        <a href="tel: 8 (029) 701 30 30" rel="noopener noreferrer" class="text-dark phone"><div class="item item2">1</div></a>
+                        <a href="tel: 8 (033) 359 53 31 " rel="noopener noreferrer" class="text-dark phone"><div class="item item2">1</div></a>
                         <div class="item item3"></div>
                         <div class="item item4"><div class="border_img"></div></div>
                         <div class="item item5"></div>
-                        <a href="tel: 8 (029) 701 30 30" rel="noopener noreferrer" class="text-dark phone"><div class="item item6">2</div></a>
+                        <a href="tel: 8 (033) 359 53 31 " rel="noopener noreferrer" class="text-dark phone"><div class="item item6">2</div></a>
                         <div class="item item7">
                             <div class="title_work">Бесплатная диагностика</div>
                             <div class="small_title_work">Наш мастер произведет диагностику, сообщит о проблеме и предложит решение.</div>
@@ -335,9 +343,9 @@
                         <div class="item item_dd item10_dd">3</div>
                         <div class="item item9">
                             <div class="title_work">Ремонт</div>
-                            <div class="small_title_work">Мы договоримся о цене и сроках, мастер начнет работ</div>
+                            <div class="small_title_work">Мы договоримся о цене и сроках, мастер начнет работать</div>
                         </div>
-                        <a href="tel: 8 (029) 701 30 30" rel="noopener noreferrer" class="text-dark phone"><div class="item item10">3</div></a>
+                        <a href="tel: 8 (033) 359 53 31 " rel="noopener noreferrer" class="text-dark phone"><div class="item item10">3</div></a>
                         <div class="item item11"></div>
                     </div>
                 </div>
@@ -352,7 +360,7 @@
                     <div class="grid_page5">
                         <div class="grid-item_5">
                             <div class="cont">
-                                Поменяли заднюю панель и дисплей на iPhone 6, сделали все быстро, качественно и недорого. Я попросил мастера приехать ко мне в офис, и уже через час мой телефон был отремонтирован! Спасибо большое!
+                                Порекомендовали поменяли заднюю панель и дисплей на iPhone 6, сделали все быстро, качественно и недорого. Я попросил мастера приехать ко мне в офис, и уже через час мой телефон был полностью восстановлен! Спасибо большое!
                             </div>
                             <div class="people">
                                 <div class="otz_name">Михаил Яковлев</div>
@@ -360,7 +368,7 @@
                             </div>
                         </div>
                         <div class="grid-item_5">
-                            <div class="cont">Отличный сервис и низкие цены! Ребята помогли мне отремонтировать ноутбук, когда я уже думала что он больше не будет работать! Спасибо!</div>
+                            <div class="cont">Отличный сервис и низкие цены! Ребята помогли мне разобраться с ноутбуком, когда я уже думала что он больше не будет работать! Спасибо!</div>
                             <div class="people">
                                 <div class="otz_name">Александра Тихонова</div>
                                 <div class="otz_job_title">Студентка</div>
@@ -384,13 +392,13 @@
                 </div>
                 <div class="mail_to_send">
                     <div class="pos">
-                        <div class="style_mail">Если вы обращались в наш сервис, пишите нам на fix.remtv@gmail.com. Мы бы очень хотели узнать ваше мнение о нашей работе!</div>
+                        <div class="style_mail">Если вы обращались в наш сервис, пишите нам на procomp.www.service@gmail.com Мы бы очень хотели узнать ваше мнение о нашей работе!</div>
                     </div>
                     <div>
                         <div class="style_mail">Или свяжитесь с нами по телефону</div>
                         <div class="btn_page5">
                             <div class="btn_p5_text">
-                                <a href="tel: 8 (029) 701 30 30" rel="noopener noreferrer" class="text-light phone">Позвонить</a>
+                                <a href="tel: 8 (033) 359 53 31 " rel="noopener noreferrer" class="text-light phone">Позвонить</a>
                             </div>
                         </div>
                     </div>
@@ -408,8 +416,8 @@
                             <img src="https://static.tildacdn.com/tild6465-6665-4966-a561-343765313263/cup1.svg" class="ic">
                         </div>
                         <div class="why_text">
-                            <div class="why_text_title">10 лет работы в ремонте цифрой техники</div>
-                            <div class="why_simple_text">За долгое время, мы выполнили огромное количество ремонтов. Быстрая работа и профессиональные мастера - наше преимущество!</div>
+                            <div class="why_text_title">10 лет работы в диагностике цифрой техники</div>
+                            <div class="why_simple_text">За долгое время, мы помогли огромного колличеству клиентов. Быстрая работа и профессиональные мастера - наше преимущество!</div>
                         </div>
                     </div>
                     <div class="block_why">
@@ -440,10 +448,10 @@
                                 Некоторые факты о нас
                             </div>
                             <div class="text_facts">
-                                Наш сервис предоставляет услуги по ремонту и восстановлению цифровой техники. Наши специалисты помогут Вам в любой ситуации и всегда пойдут навстречу, при этом мы гарантируем соблюдение сроков исполнения ремонта техники. Мы выполняем ремонт смартфонов Nokia, Samsung, Fly, Huawei, ремонт Apple всех моделей и другую цифровую технику.
+                                Наш сервис предоставляет услуги по диагностике и восстановлению цифровой техники. Наши специалисты помогут Вам в любой ситуации и всегда пойдут навстречу, при этом мы гарантируем соблюдение сроков исполнения. Мы выполняем диагностику смартфонов Nokia, Samsung, Fly, Huawei, Apple всех моделей и другую цифровую технику.
                             </div>
                             <div class="text_facts facts2">
-                                Наш офис находится в центре города, также мы осуществляет доставку после ремонта по всему городу. Просто позвоните нам, и мы поможем решить вашу проблему!
+                                Наш офис находится в центре города, также мы осуществляет доставку после диагностики по всему городу. Просто позвоните нам, и мы поможем решить вашу проблему!
                             </div>
                         </div>
                         <div class="information_img">
@@ -485,32 +493,48 @@
                         <div class="user_sys us item_user">Катя:</div>
                         <div class="user_sys item_sys">Поддержка:</div>
                         <div class="question item_question">
-                            Вы используете оригинальные запчасти для ремонта?
+                            Вы используете оригинальные программы для диагностики?
                         </div>
                         <div class="answer item_answer">
-                            Да. Мы работаем только с новыми оригинальными запасными частями поставляемых от производителя.
+                            Да. Мы работаем только с обновленными лицензионными программами выпущенные от официального производителя.
                         </div>
                     </div>
                 </div>
             </div>
             <div class="page9" id="page9">
                 <div class="maps">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaa4a87b31819f7de1b58122d41eb05fe7262a98868bbb7c892f5e68b49d6b55f&amp;width=100%&amp;height=586&amp;lang=ru_RU&amp;scroll=true"></script>
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaa4a87b31819f7de1b58122d41eb05fe7262a98868bbb7c892f5e68b49d6b55f&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
                 </div>
                 <div class="footer">
                     <div class="footer_title">
                         Контакты:
                     </div>
                     <div class="footer_number">
-                        8 (029) 701 30 30
+                        8 (033) 359 53 31 
                     </div>
                     <div class="footer_mail">
-                        fix.remtv@gmail.com
+                        procomp.www.service@yandex.com
                     </div>
                     <div class="footer_text">
                         Мы находимся в центре города, Также </br>подписывайтесь на нас в соц сетях!
                     </div>
                     <div class="footer_link"></div>
+                    <div class="footer_nav">
+                        <ul class="navbar-nav foot">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#service">Услуги</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#page5">Отзывы</a>
+                            </li>
+                            <li class="nav-item make_call">
+                                <a class="nav-link text-white">Заказать звонок</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#page9">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
